@@ -1,0 +1,13 @@
+<h1>Welcome, <%= @user.email %>!</h1>
+
+<%= link_to "Create an Event", new_event_path %>
+
+<h2>Created events</h2>
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <%= event.name %>
+    </li>
+  <% end %>
+</ul>
+
