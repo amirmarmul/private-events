@@ -1,0 +1,3 @@
+<%= form_for current_user.attendees.find_by(attended_event_id: @event.id), html: { method: :delete } do |form|  %>
+  <%= form.submit "Cancel" %>
+<% end %>

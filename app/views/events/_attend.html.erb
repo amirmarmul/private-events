@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <%= form_for current_user.attendees.build(attended_event: @event) do |form| %>
+    <%= form.hidden_field :attended_event_id %>
+    <%= form.submit "Attend" %>
+  <% end %>
+<% end %>

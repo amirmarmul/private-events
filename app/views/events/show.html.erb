@@ -1,1 +1,17 @@
-<h1><%= @event.name %></h1>
+<div>
+  <h1><%= @event.name %></h1>
+  <div>
+    <%= render "attend_cancel" %>
+  </div>
+
+  <p>Location: <%= @event.location %></p>
+  <p>Date: <%= @event.date %></p>
+  
+  <% if @event.users.any? %>
+    <% @event.users.each do |user| %>
+      <span><%= user.email %></span>
+    <% end %>
+  <% else %>
+    No attendees
+  <% end %>
+</div>
